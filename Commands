@@ -1,0 +1,11 @@
+二、开启指定端口
+
+# 开启80端口
+iptables -I INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+iptables  -I OUTPUT -o eth0 -p tcp --sport 80 -j ACCEPT
+
+三、关闭指定端口
+
+# 关闭80端口
+iptables -I INPUT -i eth0 -p tcp --dport 80 -j DROP
+iptables -I OUTPUT -o eth0 -p tcp --sport 80 -j DROP
