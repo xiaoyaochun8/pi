@@ -9,6 +9,11 @@ iptables  -I OUTPUT -o eth0 -p tcp --sport 80 -j ACCEPT
 iptables -I INPUT -i eth0 -p tcp --dport 80 -j DROP
 iptables -I OUTPUT -o eth0 -p tcp --sport 80 -j DROP
 
+service mysql start
+systemctl start mysql
+
+netstat -tunlp
+
 ##################################
 
 install:
