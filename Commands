@@ -3,8 +3,6 @@
 iptables -I INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
 iptables  -I OUTPUT -o eth0 -p tcp --sport 80 -j ACCEPT
 
-三、关闭端口
-
 # 关闭80端口
 iptables -I INPUT -i eth0 -p tcp --dport 80 -j DROP
 iptables -I OUTPUT -o eth0 -p tcp --sport 80 -j DROP
@@ -17,5 +15,10 @@ netstat -tunlp
 ##################################
 
 install:
-php php-mysql mysql git
-redis swoole
+apt-get install
+apache2
+php php-mysql php7.0-dev php-redis
+mysql-server
+git
+redis-server
+swoole
