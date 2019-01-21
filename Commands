@@ -22,3 +22,11 @@ mysql-server
 git
 redis-server
 swoole
+
+--
+cd swoole
+sudo phpize
+sudo ./configure
+sudo make 
+sudo make install
+--
